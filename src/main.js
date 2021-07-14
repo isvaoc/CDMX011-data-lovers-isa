@@ -9,7 +9,6 @@ function visualize(data){
         console.log(data["pokemon"][prop]["num"])
         console.log(data["pokemon"][prop]["name"])
         console.log(data["pokemon"][prop]["img"])
-
     }
 }
 visualize(data)
