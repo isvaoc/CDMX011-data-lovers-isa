@@ -4,11 +4,25 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 /*console.log(example, data);*/
-function visualize(data){
-    for (let prop in data["pokemon"]){
-        console.log(data["pokemon"][prop]["num"])
-        console.log(data["pokemon"][prop]["name"])
-        console.log(data["pokemon"][prop]["img"])
-    }
+
+
+
+
+
+let users= data.pokemon;
+function hola(users){
+for(let i=0; i<users.length; i++){
+    let num= (users[i]["num"]);
+    console.log(num);
+    let newDiv= document.createElement("div");
+    newDiv.innerHTML=("hola"+ num);
+   document.body.appendChild(newDiv);
+   
+ 
+
+   
+    
 }
-visualize(data)
+}
+hola(users);
+
