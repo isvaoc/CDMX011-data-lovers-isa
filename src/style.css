@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 #root > div{
-    background-color: green;
+    background-color: #4E80C1;
     padding: 20px;
     width: fit-content;
     margin: 30px 20px;
@@ -14,13 +14,14 @@
     
 }
 
-#root > #div-poke-1{
+/*#root > #div-poke-1{
     background-color: pink;
-}
+}*/
 
 body{
     margin:0%;
     padding: 0%;
+    background-color: #21579D;
 }
 
 header{
