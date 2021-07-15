@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
     <!--<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>-->
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="logo.png" width="100px">
+        <img src="logo.png" id="imag">
       </div>
       <div class="seeker">
         <input type="text" id="search" placeholder="Search a Pokemon">
@@ -51,11 +55,22 @@
             <option value="fairy">Fairy</option>
           </select>
         </div>
+        <div class="sort-select">
+          <label for="sort">Sort by:</label>
+          <select name="sort" id="sort">
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+            <option value="numa">Number Asc</option>
+            <option value="numd">Number Desc</option>
+          </select>
+        </div>
       </div>
     </header>
-    <main></main>
+    <main>
+      <div id="root"></div>
+    </main>
     <footer></footer>
-    <div id="root"></div>
+    
     <script src="main.js" type="module"></script>
   </body>
 </html>

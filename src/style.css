@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+#root > div{
+    background-color: green;
+    padding: 20px;
+    width: fit-content;
+    margin: 30px 20px;
+    display:inline-block;
+}
+
+#root > div:hover{
+    background-color: blue;
+    
+}
+
+#root > #div-poke-1{
+    background-color: pink;
+}
+
+body{
+    margin:0%;
+    padding: 0%;
+}
+
+header{
+    background-color: #CF4962;
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding:10px 10px;
+    /*flex-wrap:wrap;
+    flex-basis: auto*/
+    gap:60px;
+}
+
+#imag{
+    width: 50%;
+}
+
+.filter{
+    background-color: #E9778C;
+    padding-bottom: 10px; 
+}
+
+.seeker{
+    margin: 0px 20px
+}
+
+.filter-title{
+    background-color: #8C0B23;
+    width: 100%;
+    margin-top:0px;
+    text-align: left;
+    padding: 0px 20px;
+}
+.filter-title > p{
+    margin: 0px;
+}
+
+.region > p, label, input {
+    display: inline-block
+}
+
+.region{
+    padding: 0px 20px;
+}
+
+.sort-select, .type {
+    display: inline-block;
+}
+
+.sort-select{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.type{
+    padding-left: 20px;
+}
+
+#search{
+    border-radius: 10px;
+    width: 140%;
+    font-size: 20px;
+}
+
+
+main{
+    font-family: 'Reem Kufi', sans-serif;
+}
+
