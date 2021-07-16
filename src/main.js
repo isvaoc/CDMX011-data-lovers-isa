@@ -1,6 +1,6 @@
-import { example } from './data.js';
+/*
 // import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
+
 // import data from './data/rickandmorty/rickandmorty.js';
 
 /*console.log(example, data);*/
@@ -20,7 +20,8 @@ for(let i=0; i<users.length; i++){
 }
    hola(users);*/
    
-   
+import dataManipulator from './data.js';
+import data from './data/pokemon/pokemon.js';  
  
 
    
@@ -54,8 +55,34 @@ function visualize(data){
         div2.appendChild(pName)
         div.appendChild(div2)
     }
+    
+    
+
 }
 visualize(data)
+
+const selectElement = document.getElementById('sort');
+selectElement.addEventListener('change', (event) => {
+    let sortBy
+    let sortOrder
+    if (event.target.value == "az"){
+        sortBy="name";
+        sortOrder="asc";
+        dataManipulator.sortData(data, sortBy, sortOrder)
+    }  else if (event.target.value == "za"){
+        sortBy="name";
+        sortOrder="dsc";
+        console.log(event.target.value)
+    } else if (event.target.value == "numa"){
+        sortBy="num";
+        sortOrder="asc";
+        console.log(event.target.value)
+    } else if (event.target.value == "numd"){
+        sortBy="num";
+        sortOrder="dsc";
+        console.log(event.target.value)
+    }
+});
 
 
 
