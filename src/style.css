@@ -1,15 +1,31 @@
 *{
     box-sizing: border-box;
 }
+.header-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+    align-content: center;
+
+}
+.root-container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    justify-content:center;
+   
+    
+}
 #root > div{
     background-color: #4E80C1;
     padding: 20px;
-    width: fit-content;
     margin: 30px 20px;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    width:300px;
 }
 
 #root > div:hover{
@@ -17,31 +33,26 @@
     
 }
 
-/*#root > #div-poke-1{
-    background-color: pink;
-}*/
 
 body{
     margin:0%;
     padding: 0%;
-    background-color: #21579D;
+    background-color:#21579D;
 }
 
 header{
     background-color: #CF4962;
     font-family: 'Roboto', sans-serif;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     padding:10px 10px;
-    /*flex-wrap:wrap;
-    flex-basis: auto*/
-    gap:60px;
+   
+}
+.logo{
+    background-color:antiquewhite;
+    width:20%;
 }
 
 #imag{
-    width: 50%;
+    width: 200px;
 }
 
 .filter{
@@ -50,7 +61,10 @@ header{
 }
 
 .seeker{
-    margin: 0px 20px
+    background-color: yellow;
+    margin: 0px 20px;
+    width:30%;
+    text-align: left;
 }
 
 .filter-title{
@@ -87,7 +101,7 @@ header{
 
 #search{
     border-radius: 10px;
-    width: 140%;
+    width: 100%;
     font-size: 20px;
 }
 
