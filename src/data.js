@@ -11,10 +11,14 @@ export const anotherExample = () => {
 sortData(data, sortBy, sortOrder)
 sortBy,  campos de la data se quiere ordenar. 
 sortOrder, ascendente o descendente.
+
+filterData(data, condition): esta función filter 
+o filtrar recibiría la data, y nos retornaría 
+aquellos datos que sí cumplan con la condición.
 */
 
-const dataManipulator = {
-  sortData: function(data, sortBy, sortOrder){
+
+export function sortData(data, sortBy, sortOrder){ 
     const datos = data["pokemon"]
     console.log(sortBy)
     console.log(sortOrder)
@@ -66,8 +70,6 @@ const dataManipulator = {
     console.log("numero descendente")
     console.log(data["pokemon"][0]["num"])
     }
-    return data
-  }
+    console.log(datos)
+    return datos
 }
-
-export default dataManipulator;
