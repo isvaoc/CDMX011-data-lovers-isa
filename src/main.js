@@ -16,12 +16,13 @@ function visualize(data){
         div.setAttribute("id", "div-poke-" + prop)
         let imgn = document.createElement("img")
         imgn.src=link
-        imgn.style.display="inline-block"
+        /*imgn.style.display="flex"*/
         let divroot = document.getElementById("root")
+        
         divroot.appendChild(div)
         div.appendChild(imgn)
         let div2 = document.createElement("div")
-        div2.style.display="inline-block"
+        /*div2.style.display="flex"*/
         let pNum = document.createElement("p")
         pNum.innerText = numero 
         

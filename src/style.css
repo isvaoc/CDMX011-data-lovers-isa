@@ -6,7 +6,10 @@
     padding: 20px;
     width: fit-content;
     margin: 30px 20px;
-    display:inline-block;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #root > div:hover{
