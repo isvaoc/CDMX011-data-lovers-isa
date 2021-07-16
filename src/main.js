@@ -72,15 +72,15 @@ selectElement.addEventListener('change', (event) => {
     }  else if (event.target.value == "za"){
         sortBy="name";
         sortOrder="dsc";
-        console.log(event.target.value)
+        dataManipulator.sortData(data, sortBy, sortOrder)
     } else if (event.target.value == "numa"){
         sortBy="num";
         sortOrder="asc";
-        console.log(event.target.value)
+        dataManipulator.sortData(data, sortBy, sortOrder)
     } else if (event.target.value == "numd"){
         sortBy="num";
         sortOrder="dsc";
-        console.log(event.target.value)
+        dataManipulator.sortData(data, sortBy, sortOrder)
     }
 });
 
