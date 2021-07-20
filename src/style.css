@@ -21,16 +21,17 @@
    
     
 }
-#root > div{
+
+
+.divs-poke:hover{
+    background-color:#B3CAE8;
+    
+}
+.divs-poke{
     background-color: #4E80C1;
     padding: 20px;
     margin: 30px 20px;
     width:300px;
-}
-
-#root > div:hover{
-    background-color: blue;
-    
 }
 
 
@@ -47,7 +48,6 @@ header{
    
 }
 .logo{
-    background-color:antiquewhite;
     width:20%;
 }
 
@@ -61,7 +61,6 @@ header{
 }
 
 .seeker{
-    background-color: yellow;
     margin: 0px 20px;
     width:30%;
     text-align: left;
@@ -109,9 +108,12 @@ header{
 main{
     font-family: 'Reem Kufi', sans-serif;
 }
+.img-poke{
+    display: inline-block;
+    width:100px;
+}
 
-
-
-.carlote{
-    background-color: purple;
+.div-text{
+    display: inline-block;
+    font-size: 14px;
 }

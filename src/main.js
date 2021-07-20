@@ -18,26 +18,17 @@ for(let i=0; i<users.length; i++){
    hola(users);*/
    
 import { sortData } from './data.js';
+import { filterData} from './data.js';
 import data from './data/pokemon/pokemon.js';  
  
-let carlitos=()=>{
-let fernando=document.querySelector("#carlitos")
-let div = document.createElement("div")
-div.append("Soy una serpiete que anda por el boque")
-/*div.id = "div-poke-" + prop
-div.class = "divs-poke"*/
-div.setAttribute("class", "carlote")
-fernando.appendChild(div)
-}
 
-    carlitos()
     
-function visualize(datos){
-    for (let prop in datos["pokemon"]){
-        let numero = datos["pokemon"][prop]["num"]
-        let nombre = datos["pokemon"][prop]["name"]
-        let link = datos["pokemon"][prop]["img"]
-        let tipos = data["pokemon"][prop]["type"].map((type)=>type).join(", ")
+function visualize(data){
+    for (let prop in data["pokemon"]){
+        let numero = data["pokemon"][prop]["num"]
+        let nombre = data["pokemon"][prop]["name"].toUpperCase()
+        let link = data["pokemon"][prop]["img"]
+        let tipos = data["pokemon"][prop]["type"].map((type)=>type)
         let div = document.createElement("div")
         /*div.id = "div-poke-" + prop
         div.class = "divs-poke"*/
@@ -45,6 +36,7 @@ function visualize(datos){
         div.setAttribute("id", "div-poke-" + prop)
         let imgn = document.createElement("img")
         imgn.src=link
+        imgn.setAttribute("class","img-poke")
         /*imgn.style.display="flex"*/
         let divroot = document.getElementById("root")
         
@@ -59,12 +51,15 @@ function visualize(datos){
         pName.innerText = nombre 
 
         let pType =document.createElement("p")
-        pType.innerText = tipos
+        pType.innerText = "Types: "+ tipos
         
         div2.appendChild(pNum)
         div2.appendChild(pName)
         div2.appendChild(pType)
         div.appendChild(div2)
+        div2.setAttribute("class","div-text")
+
+      
     }
 }
 visualize(data);
@@ -102,12 +97,29 @@ selectElement.addEventListener('change', (event) => {
 });
 
 
+const selectElementFil = document.getElementById('type');
+selectElementFil.addEventListener('change', (event) => {
+    let condition
+    let datos= data["pokemon"];
+    
+    if (event.target.value == "normal"){
+        condition="normal";
+        filterData(datos,condition)
+        deleteall()
+        visualize(filterData(datos))
+    
+   
+    }
+});
+
 function deleteall(){
     const dom = document.getElementById("root")
     while(dom.firstChild){
         dom.removeChild(dom.firstChild)
     }
 }
+
+
 
 
 

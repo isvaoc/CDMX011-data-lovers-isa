@@ -73,3 +73,14 @@ export function sortData(data, sortBy, sortOrder){
     console.log(datos)
     return datos
 }
+
+
+export function filterData(datos, condition){ 
+  console.log(condition)
+ let n = datos.filter(function(ele){
+     return ele.type == 'normal';
+  
+
+     });
+    return console.log(n )
+  }
