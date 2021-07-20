@@ -28,36 +28,160 @@ function visualize(datos) {
     let numero = datos[prop]["num"];
     let nombre = datos[prop]["name"].toUpperCase();
     let link = datos[prop]["img"];
-    let tipos = datos[prop]["type"].map((type) => type).join(',');
+    let tipos = datos[prop]["type"].map((type) => type);
     let div = document.createElement("div");
-    /*div.id = "div-poke-" + prop
-        div.class = "divs-poke"*/
     div.setAttribute("class", "divs-poke");
     div.setAttribute("id", "div-poke-" + prop);
     let imgn = document.createElement("img");
     imgn.src = link;
     imgn.setAttribute("class", "img-poke");
-    /*imgn.style.display="flex"*/
     let divroot = document.getElementById("root");
-
     divroot.appendChild(div);
     div.appendChild(imgn);
+
     let div2 = document.createElement("div");
-    /*div2.style.display="flex"*/
+    div2.setAttribute("class", "div-text");
+
     let pNum = document.createElement("p");
     pNum.innerText = numero;
 
     let pName = document.createElement("p");
     pName.innerText = nombre;
 
-    let pType = document.createElement("p");
-    pType.innerText = "Types: " + tipos;
-
     div2.appendChild(pNum);
     div2.appendChild(pName);
-    div2.appendChild(pType);
     div.appendChild(div2);
-    div2.setAttribute("class", "div-text");
+
+    let divTipo = document.createElement("div");
+    divTipo.setAttribute("class", "div-tipo");
+    div2.appendChild(divTipo);
+
+    let divTipo0 = document.createElement("div");
+    divTipo0.setAttribute("class", "div-tipo-0");
+    let pType = document.createElement("p");
+    pType.innerText = "Types: ";
+    divTipo0.appendChild(pType);
+    divTipo.appendChild(divTipo0);
+
+    let divTipo1 = document.createElement("div");
+    divTipo1.setAttribute("class", "div-tipo-1");
+    let pType1 = document.createElement("p");
+    pType1.innerText = tipos[0];
+    divTipo1.appendChild(pType1);
+    divTipo.appendChild(divTipo1);
+
+    let divTipo2 = document.createElement("div");
+    divTipo2.setAttribute("class", "div-tipo-2");
+    let pType2 = document.createElement("p");
+    pType2.innerText = tipos[1];
+    divTipo2.appendChild(pType2);
+    divTipo.appendChild(divTipo2);
+
+    if (pType2.innerText == "undefined") {
+      divTipo.removeChild(divTipo2);
+    }
+
+    if (pType1.innerText == "normal") {
+      divTipo1.style["background-color"] = "#FFFFFF";
+    } else if (pType2.innerText == "normal") {
+      divTipo2.style["background-color"] = "#FFFFFF";
+    }
+   if (pType1.innerText == "fire") {
+      divTipo1.style["background-color"] = "#ECA110";
+    } else if (pType2.innerText == "fire") {
+      divTipo2.style["background-color"] = "#ECA110";
+    }
+   if (pType1.innerText == "water") {
+      divTipo1.style["background-color"] = "#219EBC";
+    } else if (pType2.innerText == "water") {
+      divTipo2.style["background-color"] = "#219EBC";
+    }
+   if (pType1.innerText == "grass") {
+      divTipo1.style["background-color"] = "#84CF6A";
+    } else if (pType2.innerText == "grass") {
+      divTipo2.style["background-color"] = "#84CF6A";
+    }
+   if (pType1.innerText == "flying") {
+      divTipo1.style["background-color"] = "#6E753A";
+    } else if (pType2.innerText == "flying") {
+      divTipo2.style["background-color"] = "#6E753A";
+    }
+   if (pType1.innerText == "fighting") {
+      divTipo1.style["background-color"] = "#411D13";
+      divTipo1.style.color = "white";
+    } else if (pType2.innerText == "fighting") {
+      divTipo2.style["background-color"] = "#411D13";
+      divTipo2.style.color = "white";
+    }
+   if (pType1.innerText == "electric") {
+      divTipo1.style["background-color"] = "#FFD60A";
+    } else if (pType2.innerText == "electric") {
+      divTipo2.style["background-color"] = "#FFD60A";
+    }
+   if (pType1.innerText == "ground") {
+      divTipo1.style["background-color"] = "#AD803D";
+    } else if (pType2.innerText == "ground") {
+      divTipo2.style["background-color"] = "#AD803D";
+    }
+ if (pType1.innerText == "poison") {
+      divTipo1.style["background-color"] = "#B280BE";
+    } else if (pType2.innerText == "poison") {
+      divTipo2.style["background-color"] = "#B280BE";
+    }
+   if (pType1.innerText == "rock") {
+      divTipo1.style["background-color"] = "#4C5C68";
+      divTipo1.style.color = "white";
+    } else if (pType2.innerText == "rock") {
+      divTipo2.style["background-color"] = "#4C5C68";
+      divTipo2.style.color = "white";
+    }
+   if (pType1.innerText == "psychic") {
+      divTipo1.style["background-color"] = "#A4133C";
+      divTipo1.style.color = "white";
+    } else if (pType2.innerText == "psychic") {
+      divTipo2.style["background-color"] = "#A4133C";
+      divTipo2.style.color = "white";
+    }
+   if (pType1.innerText == "ice") {
+      divTipo1.style["background-color"] = "#8ECAE6";
+    } else if (pType2.innerText == "ice") {
+      divTipo2.style["background-color"] = "#8ECAE6";
+    }
+   if (pType1.innerText == "bug") {
+      divTipo1.style["background-color"] = "#4B7F52";
+    } else if (pType2.innerText == "bug") {
+      divTipo2.style["background-color"] = "#4B7F52";
+    }
+   if (pType1.innerText == "ghost") {
+      divTipo1.style["background-color"] = "#723C70";
+    } else if (pType2.innerText == "ghost") {
+      divTipo2.style["background-color"] = "#723C70";
+    }
+   if (pType1.innerText == "steel") {
+      divTipo1.style["background-color"] = "#A0AEB7";
+    } else if (pType2.innerText == "steel") {
+      divTipo2.style["background-color"] = "#A0AEB7";
+    }
+   if (pType1.innerText == "dragon") {
+      divTipo1.style["background-color"] = "#FE5F55";
+    } else if (pType2.innerText == "dragon") {
+      divTipo2.style["background-color"] = "#FE5F55";
+    }
+   if (pType1.innerText == "dark") {
+      divTipo1.style["background-color"] = "#0D1B2A";
+      divTipo1.style.color = "white";
+    } else if (pType2.innerText == "dark") {
+      divTipo2.style["background-color"] = "#0D1B2A";
+      divTipo2.style.color = "white";
+    }
+   if (pType1.innerText == "fairy") {
+      divTipo1.style["background-color"] = "#FDD1C9";
+    } else if (pType2.innerText == "fairy") {
+      divTipo2.style["background-color"] = "#FDD1C9";
+    }
+
+
+
   }
 }
 visualize(data["pokemon"]);
@@ -93,8 +217,6 @@ selectElement.addEventListener("change", (event) => {
     visualize(valor4);
   }
 });
-
-
 
 const selectElementFil = document.getElementById("type");
 selectElementFil.addEventListener("change", (event) => {
@@ -201,11 +323,9 @@ const searchBar = document.getElementById("search");
 
 searchBar.addEventListener("keyup", (e) => {
   const search = e.target.value;
-  console.log(search)
-  const results= datos.filter((element)=>{
-      return (element.name.includes(search) || element.num.includes(search))
-      
-  })
+  const results = datos.filter((element) => {
+    return element.name.includes(search) || element.num.includes(search);
+  });
   deleteall();
   visualize(results);
 });
