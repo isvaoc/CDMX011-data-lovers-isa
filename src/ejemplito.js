@@ -297,27 +297,26 @@ let data = {"pokemon": [{
 function visualize(data){
     for (let prop in data["pokemon"]){
         
-        let tipos = data["pokemon"][prop]["type"].map((type)=>type)
-        console.log(tipos)
+      let tipos = data["pokemon"][prop]["type"].map((type)=>type)
+      console.log(tipos)
 
 
-tipos.map((tipo,i)=>{
-    if(tipo =='grass'){
-        let ok=tipos[i]
-        console.log(ok)
-        return ok
-    }
+      tipos.map((tipo,i)=>{
+        if(tipo =='grass'){
+          let ok=tipos[i]
+          console.log(ok)
+          return ok
+        }
     
-})
+      });
 
         
     }
     
 }
+ visualize(data);
 
-
-    visualize(data);
-
+ 
     let newArray= data.pokemon.filter(function(ele){
         return ele.name == 'bulbasaur'
     });
