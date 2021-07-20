@@ -321,3 +321,4 @@ function visualize(data){
         return ele.name == 'bulbasaur'
     });
     console.log(newArray)
+
