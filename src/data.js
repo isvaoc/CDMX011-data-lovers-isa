@@ -1,13 +1,5 @@
-// estas funciones son de ejemplo
 
-/*export const example = () => {
- return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
+/*
 sortData(data, sortBy, sortOrder)
 sortBy,  campos de la data se quiere ordenar. 
 sortOrder, ascendente o descendente.
@@ -16,6 +8,8 @@ filterData(data, condition): esta función filter
 o filtrar recibiría la data, y nos retornaría 
 aquellos datos que sí cumplan con la condición.
 */
+
+//Función de Ordenar data
 
 export function sortData(datos, sortBy, sortOrder) {
   if (sortBy == "name" && sortOrder == "asc") {
@@ -60,6 +54,8 @@ export function sortData(datos, sortBy, sortOrder) {
   }
   return datos;
 }
+
+//Función de Filtrar data
 
 export function filterData(datos, condition) {
   if (condition == "normal") {

@@ -1,27 +1,12 @@
-/*
-// import data from './data/lol/lol.js';
-
-// import data from './data/rickandmorty/rickandmorty.js';
-
 /*console.log(example, data);*/
-
-/*
-let users= data.pokemon;
-function hola(users){
-for(let i=0; i<users.length; i++){
-    let num= (users[i]["num"]);
-    console.log(num);
-    let newDiv= document.createElement("div");
-    newDiv.innerHTML=("hola"+ num);
-   document.body.appendChild(newDiv);
-}
-   hola(users);*/
 
 import { sortData } from "./data.js";
 import { filterData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 let datos = data["pokemon"];
+
+//Visualizar los Divs en pantalla
 
 function visualize(datos) {
   for (let prop in datos) {
@@ -81,110 +66,111 @@ function visualize(datos) {
       divTipo.removeChild(divTipo2);
     }
 
+    //Colocar el color al tipo
+
     if (pType1.innerText == "normal") {
       divTipo1.style["background-color"] = "#FFFFFF";
     } else if (pType2.innerText == "normal") {
       divTipo2.style["background-color"] = "#FFFFFF";
     }
-   if (pType1.innerText == "fire") {
+    if (pType1.innerText == "fire") {
       divTipo1.style["background-color"] = "#ECA110";
     } else if (pType2.innerText == "fire") {
       divTipo2.style["background-color"] = "#ECA110";
     }
-   if (pType1.innerText == "water") {
+    if (pType1.innerText == "water") {
       divTipo1.style["background-color"] = "#219EBC";
     } else if (pType2.innerText == "water") {
       divTipo2.style["background-color"] = "#219EBC";
     }
-   if (pType1.innerText == "grass") {
+    if (pType1.innerText == "grass") {
       divTipo1.style["background-color"] = "#84CF6A";
     } else if (pType2.innerText == "grass") {
       divTipo2.style["background-color"] = "#84CF6A";
     }
-   if (pType1.innerText == "flying") {
+    if (pType1.innerText == "flying") {
       divTipo1.style["background-color"] = "#6E753A";
     } else if (pType2.innerText == "flying") {
       divTipo2.style["background-color"] = "#6E753A";
     }
-   if (pType1.innerText == "fighting") {
+    if (pType1.innerText == "fighting") {
       divTipo1.style["background-color"] = "#411D13";
       divTipo1.style.color = "white";
     } else if (pType2.innerText == "fighting") {
       divTipo2.style["background-color"] = "#411D13";
       divTipo2.style.color = "white";
     }
-   if (pType1.innerText == "electric") {
+    if (pType1.innerText == "electric") {
       divTipo1.style["background-color"] = "#FFD60A";
     } else if (pType2.innerText == "electric") {
       divTipo2.style["background-color"] = "#FFD60A";
     }
-   if (pType1.innerText == "ground") {
+    if (pType1.innerText == "ground") {
       divTipo1.style["background-color"] = "#AD803D";
     } else if (pType2.innerText == "ground") {
       divTipo2.style["background-color"] = "#AD803D";
     }
- if (pType1.innerText == "poison") {
+    if (pType1.innerText == "poison") {
       divTipo1.style["background-color"] = "#B280BE";
     } else if (pType2.innerText == "poison") {
       divTipo2.style["background-color"] = "#B280BE";
     }
-   if (pType1.innerText == "rock") {
+    if (pType1.innerText == "rock") {
       divTipo1.style["background-color"] = "#4C5C68";
       divTipo1.style.color = "white";
     } else if (pType2.innerText == "rock") {
       divTipo2.style["background-color"] = "#4C5C68";
       divTipo2.style.color = "white";
     }
-   if (pType1.innerText == "psychic") {
+    if (pType1.innerText == "psychic") {
       divTipo1.style["background-color"] = "#A4133C";
       divTipo1.style.color = "white";
     } else if (pType2.innerText == "psychic") {
       divTipo2.style["background-color"] = "#A4133C";
       divTipo2.style.color = "white";
     }
-   if (pType1.innerText == "ice") {
+    if (pType1.innerText == "ice") {
       divTipo1.style["background-color"] = "#8ECAE6";
     } else if (pType2.innerText == "ice") {
       divTipo2.style["background-color"] = "#8ECAE6";
     }
-   if (pType1.innerText == "bug") {
+    if (pType1.innerText == "bug") {
       divTipo1.style["background-color"] = "#4B7F52";
     } else if (pType2.innerText == "bug") {
       divTipo2.style["background-color"] = "#4B7F52";
     }
-   if (pType1.innerText == "ghost") {
+    if (pType1.innerText == "ghost") {
       divTipo1.style["background-color"] = "#723C70";
     } else if (pType2.innerText == "ghost") {
       divTipo2.style["background-color"] = "#723C70";
     }
-   if (pType1.innerText == "steel") {
+    if (pType1.innerText == "steel") {
       divTipo1.style["background-color"] = "#A0AEB7";
     } else if (pType2.innerText == "steel") {
       divTipo2.style["background-color"] = "#A0AEB7";
     }
-   if (pType1.innerText == "dragon") {
+    if (pType1.innerText == "dragon") {
       divTipo1.style["background-color"] = "#FE5F55";
     } else if (pType2.innerText == "dragon") {
       divTipo2.style["background-color"] = "#FE5F55";
     }
-   if (pType1.innerText == "dark") {
+    if (pType1.innerText == "dark") {
       divTipo1.style["background-color"] = "#0D1B2A";
       divTipo1.style.color = "white";
     } else if (pType2.innerText == "dark") {
       divTipo2.style["background-color"] = "#0D1B2A";
       divTipo2.style.color = "white";
     }
-   if (pType1.innerText == "fairy") {
+    if (pType1.innerText == "fairy") {
       divTipo1.style["background-color"] = "#FDD1C9";
     } else if (pType2.innerText == "fairy") {
       divTipo2.style["background-color"] = "#FDD1C9";
     }
-
-
-
   }
 }
 visualize(data["pokemon"]);
+
+//Ordenar la Data
 
 const selectElement = document.getElementById("sort");
 selectElement.addEventListener("change", (event) => {
@@ -217,6 +203,8 @@ selectElement.addEventListener("change", (event) => {
     visualize(valor4);
   }
 });
+
+//Filtrar por tipo
 
 const selectElementFil = document.getElementById("type");
 selectElementFil.addEventListener("change", (event) => {
@@ -312,12 +300,16 @@ selectElementFil.addEventListener("change", (event) => {
   }
 });
 
+//Borrar los divs
+
 function deleteall() {
   const dom = document.getElementById("root");
   while (dom.firstChild) {
     dom.removeChild(dom.firstChild);
   }
 }
+
+//Search-Bar
 
 const searchBar = document.getElementById("search");
 
