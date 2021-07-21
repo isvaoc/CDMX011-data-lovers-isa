@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.root-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.divs-poke:hover {
+  background-color: #b3cae8;
+}
+.divs-poke {
+  background-color: #4e80c1;
+  padding: 20px 10px;
+  margin: 30px 20px;
+  width: 300px;
+  height: 140px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  padding-top: 150px; /* cambio aqui */
+  background-color: #21579d;
+}
+
+header {
+  background-color: #cf4962;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 10px;
+  position:fixed;  /* cambio aqui */
+  top:0;           /* cambio aqui */
+  left:0;          /* cambio aqui */
+  width: 100%;    /*  cambio aqui */
+}
+.logo {
+  width: 20%;
+}
+
+#imag {
+  width: 200px;
+}
+
+.filter {
+  background-color: #e9778c;
+  padding-bottom: 10px;
+}
+.seeker {
+  margin: 0px 20px;
+  width: 30%;
+  text-align: left;
+}
+#search::placeholder {
+  font-size: 18px;
+}
+.filter-title {
+  background-color: #8c0b23;
+  width: 100%;
+  margin-top: 0px;
+  text-align: left;
+  padding: 0px 20px;
+}
+.filter-title > p {
+  margin: 0px;
+}
+.sort-select,
+.type {
+  display: inline-block;
+  margin-top:10px;
+}
+
+.sort-select {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.type {
+  padding-left: 20px;
+}
+
+#search {
+  border-radius: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+
+main {
+  font-family: "Reem Kufi", sans-serif;
+}
+.img-poke {
+  display: inline-block;
+  width: 100px;
+}
+
+.div-text {
+  display: inline-block;
+  font-size: 14px;
+  width: 60%;
+}
+
+.div-tipo{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+}
+
+.div-tipo-0{
+  width:fit-content;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.div-tipo-1{
+  width:fit-content;
+  text-align: center;
+  /*background-color: #ffafcc;*/
+  padding: 2px 5px;
+  margin-right: 10px;
+  border-radius: 5px 5px;
+}
+
+.div-tipo-2{
+  width:fit-content;
+  text-align: center;
+  background-color: magenta;
+  padding: 2px 5px;
+  border-radius: 5px 5px;
+}
+
+ p{
+  margin:0px;
+}
