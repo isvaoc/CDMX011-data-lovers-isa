@@ -321,3 +321,5 @@ searchBar.addEventListener("keyup", (e) => {
   deleteall();
   visualize(results);
 });
+
+

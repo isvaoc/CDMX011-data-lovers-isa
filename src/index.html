@@ -19,9 +19,30 @@
       <div class="seeker">
         <input type="text" id="search" placeholder="&#128269; Search a Pokemon by name or number" autocomplete="off">
       </div>
+      <div class="stats">
+        <p>The Pokemons shown in the screen belong to:</p> 
+        <div class="kanto">
+          <p>Kanto: <span id="kanto-id"> </span></p>
+          
+        </div>
+        <div class="johto">
+          <p>Johto: <span id="johto-id"> </span></p>
+
+        </div>
+      </div>
       <div class="filter">
         <div class="filter-title">
           <p><span class="iconify" data-inline="false" data-icon="clarity:filter-solid"></span> Filter</p>
+        </div>
+        <div class="sort-select">
+          <label for="sort">Sort by:</label>
+          <select name="sort" id="sort">
+            <option value="select-one">Select an option</option>
+            <option value="numa">Number Asc</option>
+            <option value="numd">Number Desc</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+          </select>
         </div>
         <div class="type">
           <label for="type">Select a type:</label>
@@ -45,16 +66,6 @@
             <option value="dragon">Dragon</option>
             <option value="dark">Dark</option>
             <option value="fairy">Fairy</option>
-          </select>
-        </div>
-        <div class="sort-select">
-          <label for="sort">Sort by:</label>
-          <select name="sort" id="sort">
-            <option value="select-one">Select an option</option>
-            <option value="numa">Number Asc</option>
-            <option value="numd">Number Desc</option>
-            <option value="az">A-Z</option>
-            <option value="za">Z-A</option>
           </select>
         </div>
       </div>
