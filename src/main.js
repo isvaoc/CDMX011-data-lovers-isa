@@ -1,5 +1,5 @@
 /*console.log(example, data);*/
-
+import { computeStats } from "./data.js";
 import { sortData } from "./data.js";
 import { filterData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
@@ -14,6 +14,9 @@ function visualize(datos) {
     let nombre = datos[prop]["name"].toUpperCase();
     let link = datos[prop]["img"];
     let tipos = datos[prop]["type"].map((type) => type);
+    let region=datos[prop]["generation"]["name"];
+    let  weak = datos[prop]["weaknesses"].join(" , ")
+    let  resistant = datos[prop]["resistant"].join(" , ")
     let div = document.createElement("div");
     div.setAttribute("class", "divs-poke");
     div.setAttribute("id", "div-poke-" + prop);
@@ -29,11 +32,17 @@ function visualize(datos) {
 
     let pNum = document.createElement("p");
     pNum.innerText = numero;
+    pNum.setAttribute("class","number-text")
+
+    let pReg=document.createElement("p");
+    pReg.innerText= region;
+    pReg.setAttribute("class","region-text")
 
     let pName = document.createElement("p");
     pName.innerText = nombre;
 
     div2.appendChild(pNum);
+    div2.appendChild(pReg);
     div2.appendChild(pName);
     div.appendChild(div2);
 
@@ -65,6 +74,19 @@ function visualize(datos) {
     if (pType2.innerText == "undefined") {
       divTipo.removeChild(divTipo2);
     }
+
+    let divInfo = document.createElement("div");
+    divInfo.setAttribute("class", "div-info");
+    div.appendChild(divInfo);
+
+    let pWeak = document.createElement("p");
+    pWeak.innerText=  "Weak: " + weak;
+
+    let pResistant = document.createElement("p");
+    pResistant.innerText = "Strong: " + resistant;
+
+    divInfo.appendChild(pResistant);
+    divInfo.appendChild(pWeak);
 
     //Colocar el color al tipo
 
@@ -167,6 +189,13 @@ function visualize(datos) {
       divTipo2.style["background-color"] = "#FDD1C9";
     }
   }
+  let stats=computeStats(datos)
+  let spanKanto=document.getElementById("kanto-id");
+  let spanJohto=document.getElementById("johto-id");
+
+  spanKanto.innerHTML=stats[0];
+  spanJohto.innerHTML=stats[1];
+
 }
 visualize(data["pokemon"]);
 
@@ -208,93 +237,94 @@ selectElement.addEventListener("change", (event) => {
 
 const selectElementFil = document.getElementById("type");
 selectElementFil.addEventListener("change", (event) => {
+  let valor
   if (event.target.value == "normal") {
-    let valor = filterData(datos, "normal");
+     valor = filterData(datos, "normal");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "fire") {
-    let valor = filterData(datos, "fire");
+     valor = filterData(datos, "fire");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "water") {
-    let valor = filterData(datos, "water");
+    valor = filterData(datos, "water");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "grass") {
-    let valor = filterData(datos, "grass");
+     valor = filterData(datos, "grass");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "flying") {
-    let valor = filterData(datos, "flying");
+     valor = filterData(datos, "flying");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "fighting") {
-    let valor = filterData(datos, "fighting");
+     valor = filterData(datos, "fighting");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "poison") {
-    let valor = filterData(datos, "poison");
+    valor = filterData(datos, "poison");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "electric") {
-    let valor = filterData(datos, "electric");
+    valor = filterData(datos, "electric");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "ground") {
-    let valor = filterData(datos, "ground");
+    valor = filterData(datos, "ground");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "rock") {
-    let valor = filterData(datos, "rock");
+    valor = filterData(datos, "rock");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "psychic") {
-    let valor = filterData(datos, "psychic");
+    valor = filterData(datos, "psychic");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "ice") {
-    let valor = filterData(datos, "ice");
+    valor = filterData(datos, "ice");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "bug") {
-    let valor = filterData(datos, "bug");
+    valor = filterData(datos, "bug");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "ghost") {
-    let valor = filterData(datos, "ghost");
+    valor = filterData(datos, "ghost");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "steel") {
-    let valor = filterData(datos, "steel");
+    valor = filterData(datos, "steel");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "dragon") {
-    let valor = filterData(datos, "dragon");
+    valor = filterData(datos, "dragon");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "dark") {
-    let valor = filterData(datos, "dark");
+    valor = filterData(datos, "dark");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "fairy") {
-    let valor = filterData(datos, "fairy");
+    valor = filterData(datos, "fairy");
     deleteall();
     visualize(valor);
   }
@@ -321,5 +351,8 @@ searchBar.addEventListener("keyup", (e) => {
   deleteall();
   visualize(results);
 });
+
+
+
 
 

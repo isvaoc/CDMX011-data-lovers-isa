@@ -21,7 +21,9 @@
   width: 20%;
   margin-left: 30px;
   grid-area:img;
+  filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.7));
 }
+
 
 .filter {
   background-color: #e9778c;
@@ -47,10 +49,11 @@
 }
 .kanto,.johto{
   background-color: #CF4962;
+  color:#B3CAE8;
   display:inline-block;
   width:49%;
-  padding-left:10px;
   border-radius: 5px;
+  text-align:center;
 }
 .root-container {
   display: flex;
@@ -69,8 +72,8 @@
   background-color: #4e80c1;
   padding: 20px 10px;
   margin: 30px 20px;
-  width: 300px;
-  height: 140px;
+  width: 400px;
+  height: 200px;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
@@ -107,7 +110,7 @@ header {
   width: 100%;
   margin-top: 0px;
   text-align: left;
-  padding: 0px 20px;
+  padding: 3px 20px 3px 5px;
 }
 .filter-title > p {
   margin: 0px;
@@ -140,14 +143,38 @@ main {
 .img-poke {
   display: inline-block;
   width: 100px;
+  margin-right: 20px;
+}
+
+.div-info{
+  background-color: #c4c4c465;
+  margin-top: 5px;
+  width: 100%;
+  border-radius:5px;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding:10px;
+  text-align: center;
+}
+.div-info > p{
+  margin:3px 0;
 }
 
 .div-text {
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   width: 60%;
 }
+.region-text{
+  display: inline-block;
+  margin-left: 130px;
+  color:#534C4C;
 
+}
+.number-text{
+  display: inline-block;
+}
 .div-tipo{
   display:flex;
   flex-direction: row;
@@ -160,7 +187,7 @@ main {
 .div-tipo-0{
   width:fit-content;
   text-align: center;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .div-tipo-1{
@@ -168,7 +195,7 @@ main {
   text-align: center;
   /*background-color: #ffafcc;*/
   padding: 2px 5px;
-  margin-right: 10px;
+  margin-right: 20px;
   border-radius: 5px 5px;
 }
 
