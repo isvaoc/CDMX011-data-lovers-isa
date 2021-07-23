@@ -294,3 +294,6 @@ let data = {"pokemon": [{
   }
 ]}
 let datos= data["pokemon"]
+console.log(datos)
+let region=datos[0].generation.name
+console.log(region)

@@ -1,4 +1,3 @@
-
 /*
 sortData(data, sortBy, sortOrder)
 sortBy,  campos de la data se quiere ordenar. 
@@ -172,4 +171,24 @@ export function filterData(datos, condition) {
     });
     return array;
   }
+}
+
+//Función estadistica
+
+export function computeStats(array) {
+  let pointsKanto = 0;
+  let pointsJohto = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].generation.name == "kanto") {
+      pointsKanto = pointsKanto + 1;
+    } else if (array[i].generation.name == "johto") {
+      pointsJohto = pointsJohto + 1;
+    }
+  }
+
+  let percentKanto = ((pointsKanto / array.length) * 100).toFixed(1);
+  let percentJohto = ((pointsJohto / array.length) * 100).toFixed(1);
+  let listPercents = [percentKanto, percentJohto];
+
+  return listPercents;
 }
