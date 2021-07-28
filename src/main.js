@@ -14,9 +14,9 @@ function visualize(datos) {
     let nombre = datos[prop]["name"].toUpperCase();
     let link = datos[prop]["img"];
     let tipos = datos[prop]["type"].map((type) => type);
-    let region=datos[prop]["generation"]["name"];
-    let  weak = datos[prop]["weaknesses"].join(" , ")
-    let  resistant = datos[prop]["resistant"].join(" , ")
+    let region = datos[prop]["generation"]["name"];
+    let weak = datos[prop]["weaknesses"].join(" , ");
+    let resistant = datos[prop]["resistant"].join(" , ");
     let div = document.createElement("div");
     div.setAttribute("class", "divs-poke");
     div.setAttribute("id", "div-poke-" + prop);
@@ -32,11 +32,11 @@ function visualize(datos) {
 
     let pNum = document.createElement("p");
     pNum.innerText = numero;
-    pNum.setAttribute("class","number-text")
+    pNum.setAttribute("class", "number-text");
 
-    let pReg=document.createElement("p");
-    pReg.innerText= region;
-    pReg.setAttribute("class","region-text")
+    let pReg = document.createElement("p");
+    pReg.innerText = region;
+    pReg.setAttribute("class", "region-text");
 
     let pName = document.createElement("p");
     pName.innerText = nombre;
@@ -80,7 +80,7 @@ function visualize(datos) {
     div.appendChild(divInfo);
 
     let pWeak = document.createElement("p");
-    pWeak.innerText=  "Weak: " + weak;
+    pWeak.innerText = "Weak: " + weak;
 
     let pResistant = document.createElement("p");
     pResistant.innerText = "Strong: " + resistant;
@@ -189,13 +189,12 @@ function visualize(datos) {
       divTipo2.style["background-color"] = "#FDD1C9";
     }
   }
-  let stats=computeStats(datos)
-  let spanKanto=document.getElementById("kanto-id");
-  let spanJohto=document.getElementById("johto-id");
+  let stats = computeStats(datos);
+  let spanKanto = document.getElementById("kanto-id");
+  let spanJohto = document.getElementById("johto-id");
 
-  spanKanto.innerHTML=stats[0];
-  spanJohto.innerHTML=stats[1];
-
+  spanKanto.innerHTML = stats[0];
+  spanJohto.innerHTML = stats[1];
 }
 visualize(data["pokemon"]);
 
@@ -237,14 +236,14 @@ selectElement.addEventListener("change", (event) => {
 
 const selectElementFil = document.getElementById("type");
 selectElementFil.addEventListener("change", (event) => {
-  let valor
+  let valor;
   if (event.target.value == "normal") {
-     valor = filterData(datos, "normal");
+    valor = filterData(datos, "normal");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "fire") {
-     valor = filterData(datos, "fire");
+    valor = filterData(datos, "fire");
     deleteall();
     visualize(valor);
   }
@@ -254,17 +253,17 @@ selectElementFil.addEventListener("change", (event) => {
     visualize(valor);
   }
   if (event.target.value == "grass") {
-     valor = filterData(datos, "grass");
+    valor = filterData(datos, "grass");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "flying") {
-     valor = filterData(datos, "flying");
+    valor = filterData(datos, "flying");
     deleteall();
     visualize(valor);
   }
   if (event.target.value == "fighting") {
-     valor = filterData(datos, "fighting");
+    valor = filterData(datos, "fighting");
     deleteall();
     visualize(valor);
   }
@@ -351,8 +350,3 @@ searchBar.addEventListener("keyup", (e) => {
   deleteall();
   visualize(results);
 });
-
-
-
-
-

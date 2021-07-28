@@ -1,82 +1,108 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>&#128126;POKEDEX WEB</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
   </head>
   <body>
     <header>
       <div class="header-container">
-      <div class="logo">
-        <img src="logo.png" id="imag">
+        <div class="logo">
+          <img src="/imagenes/logo.png" id="imag" />
+        </div>
+        <div class="seeker">
+          <input
+            type="text"
+            id="search"
+            placeholder="&#128269; Search a Pokemon by Name or Number"
+            autocomplete="off"
+          />
+        </div>
+        <div class="stats">
+          <p>The Pokemons shown in the screen belong to:</p>
+          <div class="kanto">
+            <p>Kanto: <span id="kanto-id"> </span>%</p>
+          </div>
+          <div class="johto">
+            <p>Johto: <span id="johto-id"> </span>%</p>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-title">
+            <p>
+              <span
+                class="iconify"
+                data-inline="false"
+                data-icon="clarity:filter-solid"
+              ></span>
+              Filter your Pokemon
+            </p>
+          </div>
+          <div class="sort-select">
+            <label for="sort">Sort by:</label>
+            <select name="sort" id="sort">
+              <option value="select-one">Select an option</option>
+              <option value="numa">Number Asc</option>
+              <option value="numd">Number Desc</option>
+              <option value="az">A-Z</option>
+              <option value="za">Z-A</option>
+            </select>
+          </div>
+          <div class="type">
+            <label for="type">Select a type:</label>
+            <select name="type" id="type">
+              <option value="select-one">Select an option</option>
+              <option value="normal">Normal</option>
+              <option value="fire">Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="flying">Flying</option>
+              <option value="fighting">Fighting</option>
+              <option value="poison">Poison</option>
+              <option value="electric">Electric</option>
+              <option value="ground">Ground</option>
+              <option value="rock">Rock</option>
+              <option value="psychic">Psychic</option>
+              <option value="ice">Ice</option>
+              <option value="bug">Bug</option>
+              <option value="ghost">Ghost</option>
+              <option value="steel">Steel</option>
+              <option value="dragon">Dragon</option>
+              <option value="dark">Dark</option>
+              <option value="fairy">Fairy</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="seeker">
-        <input type="text" id="search" placeholder="&#128269; Search a Pokemon by name or number" autocomplete="off">
-      </div>
-      <div class="stats">
-        <p>The Pokemons shown in the screen belong to:</p> 
-        <div class="kanto">
-          <p>Kanto: <span id="kanto-id"> </span>%</p>
-          
-        </div>
-        <div class="johto">
-          <p>Johto: <span id="johto-id"> </span>%</p>
-
-        </div>
-      </div>
-      <div class="filter">
-        <div class="filter-title">
-          <p><span class="iconify" data-inline="false" data-icon="clarity:filter-solid"></span> Filter</p>
-        </div>
-        <div class="sort-select">
-          <label for="sort">Sort by:</label>
-          <select name="sort" id="sort">
-            <option value="select-one">Select an option</option>
-            <option value="numa">Number Asc</option>
-            <option value="numd">Number Desc</option>
-            <option value="az">A-Z</option>
-            <option value="za">Z-A</option>
-          </select>
-        </div>
-        <div class="type">
-          <label for="type">Select a type:</label>
-          <select name="type" id="type">
-            <option value="select-one">Select an option</option>
-            <option value="normal">Normal</option>
-            <option value="fire">Fire</option>
-            <option value="water">Water</option>
-            <option value="grass">Grass</option>
-            <option value="flying">Flying</option>
-            <option value="fighting">Fighting</option>
-            <option value="poison">Poison</option>
-            <option value="electric">Electric</option>
-            <option value="ground">Ground</option>
-            <option value="rock">Rock</option>
-            <option value="psychic">Psychic</option>
-            <option value="ice">Ice</option>
-            <option value="bug">Bug</option>
-            <option value="ghost">Ghost</option>
-            <option value="steel">Steel</option>
-            <option value="dragon">Dragon</option>
-            <option value="dark">Dark</option>
-            <option value="fairy">Fairy</option>
-          </select>
-        </div>
-      </div>
-    </div>
     </header>
     <main>
       <div id="root" class="root-container"></div>
     </main>
-    <footer></footer>
-    
+    <footer>
+      <div class="footer-container">
+        <div class="footer-img">
+          <img src="/imagenes/footer.png" id="imag2" />
+        </div>
+        <p id="copy-text">Copyright © Todos los Derechos Reservados POKEDEX</p>
+      </div>
+    </footer>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>

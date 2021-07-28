@@ -188,6 +188,12 @@ export function computeStats(array) {
 
   let percentKanto = ((pointsKanto / array.length) * 100).toFixed(1);
   let percentJohto = ((pointsJohto / array.length) * 100).toFixed(1);
+  if (percentJohto == "NaN") {
+    percentJohto = 0;
+  }
+  if (percentKanto == "NaN") {
+    percentKanto = 0;
+  }
   let listPercents = [percentKanto, percentJohto];
 
   return listPercents;
