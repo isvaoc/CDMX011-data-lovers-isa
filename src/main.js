@@ -10,6 +10,7 @@ let datos = data["pokemon"];
 
 function visualize(datos) {
   for (let prop in datos) {
+    //Declarar propiedades de tarjetas
     let numero = datos[prop]["num"];
     let nombre = datos[prop]["name"].toUpperCase();
     let link = datos[prop]["img"];
@@ -17,73 +18,76 @@ function visualize(datos) {
     let region = datos[prop]["generation"]["name"];
     let weak = datos[prop]["weaknesses"].join(" , ");
     let resistant = datos[prop]["resistant"].join(" , ");
-    let div = document.createElement("div");
-    div.setAttribute("class", "divs-poke");
-    div.setAttribute("id", "div-poke-" + prop);
+
+    //Creacion de Div principal e interos
+    let divPoke = document.createElement("div");
+    divPoke.setAttribute("class", "divs-poke");
     let imgn = document.createElement("img");
     imgn.src = link;
     imgn.setAttribute("class", "img-poke");
-    let divroot = document.getElementById("root");
-    divroot.appendChild(div);
-    div.appendChild(imgn);
 
-    let div2 = document.createElement("div");
-    div2.setAttribute("class", "div-text");
 
-    let pNum = document.createElement("p");
-    pNum.innerText = numero;
+    let divRoot = document.getElementById("root");//Traer valor de div root
+    divRoot.appendChild(divPoke);//meter al cotenedor los divPoke
+    divPoke.appendChild(imgn);// Metimos la imagen a divPoke
+
+    let divText = document.createElement("div");//creamos div para meter los textos
+    divText.setAttribute("class", "div-text");
+
+    let pNum = document.createElement("p");//etiqueta de p para meter atributo
+    pNum.innerText = numero;//cambiar contenido y asignar atributo
     pNum.setAttribute("class", "number-text");
 
-    let pReg = document.createElement("p");
-    pReg.innerText = region;
+    let pReg = document.createElement("p");//etiqueta de p para meter atributo
+    pReg.innerText = region;//cambiar contenido y asignar atributo
     pReg.setAttribute("class", "region-text");
 
-    let pName = document.createElement("p");
-    pName.innerText = nombre;
+    let pName = document.createElement("p");//etiqueta de p para meter atributo
+    pName.innerText = nombre;//cambiar contenido y asignar atributo
 
-    div2.appendChild(pNum);
-    div2.appendChild(pReg);
-    div2.appendChild(pName);
-    div.appendChild(div2);
+    divText.appendChild(pNum);//se inserto p a divText
+    divText.appendChild(pReg);//se inserto p a divText
+    divText.appendChild(pName);//se inserto p a divText
+    divPoke.appendChild(divText);//se inserto divText a divPoke
 
-    let divTipo = document.createElement("div");
+    let divTipo = document.createElement("div");//se creo div para los tipos
     divTipo.setAttribute("class", "div-tipo");
-    div2.appendChild(divTipo);
+    divText.appendChild(divTipo);//se inserto divTipo a divText
 
-    let divTipo0 = document.createElement("div");
+    let divTipo0 = document.createElement("div");//se creo div 0
     divTipo0.setAttribute("class", "div-tipo-0");
-    let pType = document.createElement("p");
-    pType.innerText = "Types: ";
-    divTipo0.appendChild(pType);
-    divTipo.appendChild(divTipo0);
+    let pType = document.createElement("p");//se creo eiqueta p
+    pType.innerText = "Types: ";//se inserto texto 
+    divTipo0.appendChild(pType);//se inserto p a div0
+    divTipo.appendChild(divTipo0);//se inserto div0 a divTipo
 
-    let divTipo1 = document.createElement("div");
+    let divTipo1 = document.createElement("div");//se creo div 1
     divTipo1.setAttribute("class", "div-tipo-1");
-    let pType1 = document.createElement("p");
-    pType1.innerText = tipos[0];
-    divTipo1.appendChild(pType1);
-    divTipo.appendChild(divTipo1);
+    let pType1 = document.createElement("p");//se creo eiqueta p
+    pType1.innerText = tipos[0];//traer elemeto 0 de los tipos y agregar a p
+    divTipo1.appendChild(pType1);//se inserto p a div1
+    divTipo.appendChild(divTipo1);//se inserto div1 a divTipo
 
-    let divTipo2 = document.createElement("div");
+    let divTipo2 = document.createElement("div");//se creo div 2
     divTipo2.setAttribute("class", "div-tipo-2");
-    let pType2 = document.createElement("p");
-    pType2.innerText = tipos[1];
-    divTipo2.appendChild(pType2);
-    divTipo.appendChild(divTipo2);
+    let pType2 = document.createElement("p");//se creo eiqueta p
+    pType2.innerText = tipos[1];//traer elemeto 1 de los tipos y agregar a p
+    divTipo2.appendChild(pType2);//se inserto p a div2
+    divTipo.appendChild(divTipo2);//se inserto div2 a divTipo
 
     if (pType2.innerText == "undefined") {
       divTipo.removeChild(divTipo2);
-    }
+    }//si no hay tipo 2 remover div2
 
-    let divInfo = document.createElement("div");
+    let divInfo = document.createElement("div");//crear divInfo
     divInfo.setAttribute("class", "div-info");
-    div.appendChild(divInfo);
-
-    let pWeak = document.createElement("p");
-    pWeak.innerText = "Weak: " + weak;
+    divPoke.appendChild(divInfo);//insertar div info a divPoke
 
     let pResistant = document.createElement("p");
     pResistant.innerText = "Strong: " + resistant;
+
+    let pWeak = document.createElement("p");
+    pWeak.innerText = "Weak: " + weak;
 
     divInfo.appendChild(pResistant);
     divInfo.appendChild(pWeak);
