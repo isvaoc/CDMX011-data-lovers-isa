@@ -57,120 +57,103 @@ export function sortData(datos, sortBy, sortOrder) {
 //Función de Filtrar data
 
 export function filterData(datos, condition) {
+  let array = [];
   if (condition == "normal") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("normal");
     });
-    return array;
   }
   if (condition == "fire") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("fire");
     });
-    return array;
   }
   if (condition == "water") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("water");
     });
-    return array;
   }
   if (condition == "water") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("water");
     });
-    return array;
   }
   if (condition == "grass") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("grass");
     });
-    return array;
   }
   if (condition == "flying") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("flying");
     });
-    return array;
   }
   if (condition == "fighting") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("fighting");
     });
-    return array;
   }
   if (condition == "poison") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("poison");
     });
-    return array;
   }
   if (condition == "electric") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("electric");
     });
-    return array;
   }
   if (condition == "ground") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("ground");
     });
-    return array;
   }
   if (condition == "rock") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("rock");
     });
-    return array;
   }
   if (condition == "psychic") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("psychic");
     });
-    return array;
   }
   if (condition == "ice") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("ice");
     });
-    return array;
   }
   if (condition == "bug") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("bug");
     });
-    return array;
   }
   if (condition == "ghost") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("ghost");
     });
-    return array;
   }
   if (condition == "steel") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("steel");
     });
-    return array;
   }
   if (condition == "dragon") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("dragon");
     });
-    return array;
   }
   if (condition == "dark") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("dark");
     });
-    return array;
   }
   if (condition == "fairy") {
-    let array = datos.filter(function (ele) {
+    array = datos.filter(function (ele) {
       return ele.type.includes("fairy");
     });
-    return array;
   }
+  return array;
 }
 
 //Función estadistica
