@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
+
+
 .header-container {
   margin: 10px;
   display: grid;
@@ -224,59 +227,32 @@ main {
 p {
   margin: 0px;
 }
+@media only screen and (max-width: 768px) {
+  .root-container {
+    flex-direction: column;
+    background-color: aliceblue;
+  }
+}
+/*@media screen and (max-width: 800px){
 
-@media only screen and (min-width:872px){
-
-  .header-container {
+  .header-container{
     margin: 10px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-row-gap: 10px;
     grid-template-areas:
-      "img seeker filter"
-      "img stats filter";
+      "img stats stats"
+      "img seeker seeker "
+      "filter filter filter";
     align-items: center;
   }
-  #imag {
-    width: 200px;
-  }
-  .logo {
-    width: 20%;
-    margin-left: 30px;
-    grid-area: img;
-    filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.7));
-  }
-  
   .filter {
     background-color: #e9778c;
     margin-right: 30px;
-    width: fit-content;
+    width: 100%;
     grid-area: filter;
     padding-bottom: 15px;
     border-radius: 5px;
   }
-  .seeker {
-    margin: 0px 20px;
-    width: 80%;
-    grid-area: seeker;
-  }
-  
-  .stats {
-    background-color: #e9778c;
-    color: white;
-    grid-area: stats;
-    margin: 0px 20px;
-    width: 80%;
-    padding: 5px;
-  }
-  .kanto,
-  .johto {
-    background-color: #cf4962;
-    color: #b3cae8;
-    display: inline-block;
-    width: 49%;
-    border-radius: 5px;
-    text-align: center;
-  }
-}
+}*/
