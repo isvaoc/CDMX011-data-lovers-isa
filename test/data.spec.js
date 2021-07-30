@@ -1,8 +1,8 @@
 import { sortData, filterData, computeStats } from "../src/data.js";
 import data from "./data/pokemon.js";
-import pokemonSort from "./data/pokemonSortNumAsc.js";
+import pokemonSortNumAsc from "./data/pokemonSortNumAsc.js";
 import pokemonFilter from "./data/pokemonFilter.js";
-import pokemonSortDsc from "./data/pokemonSortNumDsc.js";
+import pokemonSortNumDsc from "./data/pokemonSortNumDsc.js";
 import pokemonSortNameAsc from "./data/pokemonSortNameAsc.js";
 import pokemonSortNameDsc from "./data/pokemonSortNameDsc.js";
 
@@ -13,12 +13,12 @@ describe("should be a function", () => {
 
   it("should sort by num asc", () => {
     const result = sortData(data["pokemon"], "num", "asc");
-    expect(result).toEqual(pokemonSort);
+    expect(result).toEqual(pokemonSortNumAsc);
   });
 
   it("should sort by num dsc", () => {
     const result = sortData(data["pokemon"], "num", "dsc");
-    expect(result).toEqual(pokemonSortDsc);
+    expect(result).toEqual(pokemonSortNumDsc);
   });
 
   it("should sort by name asc", () => {
@@ -104,7 +104,7 @@ describe("should be a function", () => {
   });
 
   it("should give porcentage of region of all data", () => {
-    const result = computeStats(pokemonSort);
+    const result = computeStats(pokemonSortNumAsc);
     expect(result).toEqual(["54.5", "45.5"]);
   });
 
