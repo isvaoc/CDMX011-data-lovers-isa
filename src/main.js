@@ -343,7 +343,7 @@ function deleteall() {
 const searchBar = document.getElementById("search");
 
 searchBar.addEventListener("keyup", (e) => {
-  const search = e.target.value;
+  const search = e.target.value.toLowerCase();
   const results = datos.filter((element) => {
     return element.name.includes(search) || element.num.includes(search);
   });
