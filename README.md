@@ -1,5 +1,11 @@
+Cynthia Daniela Piña Olivares
+Isabel Valdés Ochoa 
+ < Laboratoria >  
 
-‘
+
+PROYECTO 2
+Data Lovers
+
 # Data Lovers
 Resumen del Proyecto:
 PokedexWeb  es una página web de consulta informativa de datos relevantes sobre los pokemones.
@@ -14,16 +20,19 @@ El propósito de todo esto es que el usuario cuente con la información necesari
 
 Listado de problemas que detectaste a través de tests de usabilidad:
 - En nuestro prototipo inicial se decidió mostrar la data mediante una tabla, sin embargo se modificó a mostrar mediante tarjetas ya que con una tabla no se lograría la funcionalidad de responsive.
+![myimage-alt-tag](./readMeImg/1-prototipo.png) 
+
+![myimage-alt-tag](./readMeImg/2-prototipo.png) 
 
 -Se le colocó más información a las tarjetas como lo es la región y fortalezas y debilidades para que fuera más útil para el usuario.
 -Se agregó tabla de estadística para mostrar porcentajes de región.
 -Se agregó fondo de pantalla, footer y transparencias para una mayor estética de visualización.
  
 # Prototipo de alta fidelidad Final:
-
-
+![myimage-alt-tag](./readMeImg/prototipo-final.png) 
  
-Página Web:
+# Página Web:
+![myimage-alt-tag](./readMeImg/web-final.png) 
 
 # Historias de Usuario
 
@@ -98,7 +107,13 @@ Definición de terminado:
 En todo momento se debe de mostrar los porcentajes actualizados de cada región, independientemente de si se aplicó un filtro, se ordena o se buscó un pokemon.
 En caso de que al realizar una búsqueda no haya ninguna coincidencia con algún pokémon, los porcentajes deben de mostrar 0% en lugar de NaN.
 
-+ Links:
+# Links:
 
-Figma
++ Figma
 https://www.figma.com/file/phSeVyqxUKk01jzxoOslN3/Pokemon
+
++ Trello
+https://trello.com/danielapina1/boards
+
++ ReadMe.doxc
+https://docs.google.com/document/d/1AveCPYnsqg_cN-fEC3AGnzM-9nrLld2J3L66my-IYVs/edit#
