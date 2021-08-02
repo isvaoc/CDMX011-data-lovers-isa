@@ -1,9 +1,9 @@
-Cynthia Daniela Piña Olivares
+Cynthia Daniela Piña Olivares, 
 Isabel Valdés Ochoa 
  < Laboratoria >  
 
 
-PROYECTO 2
+PROYECTO 2, 
 Data Lovers
 
 # Data Lovers
