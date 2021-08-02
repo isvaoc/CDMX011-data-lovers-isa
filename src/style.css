@@ -224,12 +224,13 @@ main {
 p {
   margin: 0px;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-device-width: 900px) {
   .root-container {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-device-width: 900px) {
   .header-container {
     margin: 5px;
     grid-template-columns: auto auto;
