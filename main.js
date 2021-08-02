@@ -354,13 +354,3 @@ searchBar.addEventListener("keyup", (e) => {
   deleteall();
   visualize(results);
 });
-
-/*const imagenLogo = document.getElementById("imag");
-imagenLogo.addEventListener("click", function (){
-  let selectSort = document.getElementById("sort")
-  let selectType = document.getElementById("type")
-  selectSort.value="Select an option"
-  selectType.value="Select an option"
-  deleteall()
-  visualize(datos)
-})*/

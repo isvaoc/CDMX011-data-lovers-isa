@@ -26,6 +26,7 @@
 .filter {
   background-color: #e9778c;
   margin-right: 30px;
+  width: fit-content;
   grid-area: filter;
   padding-bottom: 15px;
   border-radius: 5px;
@@ -135,19 +136,14 @@ footer {
 .type {
   display: inline-block;
   margin-top: 10px;
-  width: 48%;
-  text-align: center;
 }
 
 .sort-select {
-  padding: 0 30px;
+  padding: 0 30px 0 20px;
 }
 
 .type {
-  padding: 0 30px;
-}
-#sort, #type{
-  width:50%;
+  padding: 0 20px 0 30px;
 }
 
 #search {
@@ -228,9 +224,6 @@ main {
 p {
   margin: 0px;
 }
-a#pull{
-  display: none;
-}
 @media only screen and (max-device-width: 900px) {
   .root-container {
     flex-direction: column;
@@ -279,42 +272,17 @@ a#pull{
     margin-top: 5px;
   }
 
-  
+  .sort-select {
+    padding: 0 10px 0 10px;
+  }
+
+  .type {
+    padding: 0 5px 0 10px;
+  }
   #search::placeholder {
-    font-size: 20px;
+    font-size: 15px;
   }
   .root-container {
     padding-top: 120px;
-  }
-  .divs-poke {
-    width: 600px;
-    height: 300px;
-    border-radius: 25px;
-  }
-  .img-poke {
-    width: 150px;
-  }
-  .div-info {
-    border-radius: 15px;
-    font-size: 22px;
-  }
-  .div-text {
-    font-size: 24px;
-  }
-  .region-text {
-    margin-left: 230px;
-    color: #a7a3a3;
-  }
-  .filter-title {
-    font-size:22px;
-  }
-  #sort-label, #type-label, #sort, #type{
-    font-size:20px;
-  }
-  #sort, #type{
-    width:60%;
-  }
-  .stats{
-    font-size: 22px;
   }
 }
