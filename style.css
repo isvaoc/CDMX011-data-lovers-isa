@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-
-
 .header-container {
   margin: 10px;
   display: grid;
@@ -61,10 +59,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   align-content: center;
-  justify-content: center;
-  min-height: calc(100vh - 70px);
+  align-items: center;
+  min-height: calc(78vh - 70px);
 }
 
 .divs-poke:hover {
@@ -227,32 +224,64 @@ main {
 p {
   margin: 0px;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-device/width: 900px) {
   .root-container {
     flex-direction: column;
-    background-color: aliceblue;
   }
 }
-@media screen and (max-width: 900px){
-
-  .header-container{
-    margin: 10px;
-    display: grid;
-    grid-template-columns: auto auto auto;
+@media only screen and (max-width: 900px) {
+  .header-container {
+    margin: 5px;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
-    grid-row-gap: 10px;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
     grid-template-areas:
-      "img stats stats"
-      "img seeker seeker "
-      "filter filter filter";
-    align-items: center;
+      "img stats"
+      "img seeker"
+      "filter filter";
   }
   .filter {
-    background-color: #e9778c;
     margin-right: 30px;
     width: 100%;
-    grid-area: filter;
-    padding-bottom: 15px;
     border-radius: 5px;
+  }
+  #imag {
+    width: 20vw;
+  }
+  .logo {
+    width: 100%;
+    padding: auto;
+  }
+
+  .seeker {
+    margin: 0px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  .stats {
+    margin: 0px;
+    padding: 5px;
+    width: 100%;
+  }
+  .sort-select,
+  .type {
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .sort-select {
+    padding: 0 10px 0 10px;
+  }
+
+  .type {
+    padding: 0 5px 0 10px;
+  }
+  #search::placeholder {
+    font-size: 15px;
+  }
+  .root-container {
+    padding-top: 120px;
   }
 }
