@@ -228,9 +228,7 @@ main {
 p {
   margin: 0px;
 }
-a#pull{
-  display: none;
-}
+
 @media only screen and (max-device-width: 900px) {
   .root-container {
     flex-direction: column;
