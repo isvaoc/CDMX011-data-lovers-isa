@@ -26,7 +26,6 @@
 .filter {
   background-color: #e9778c;
   margin-right: 30px;
-  width: fit-content;
   grid-area: filter;
   padding-bottom: 15px;
   border-radius: 5px;
@@ -147,6 +146,9 @@ footer {
 .type {
   padding: 0 30px;
 }
+#sort, #type{
+  width:55%;
+}
 
 #search {
   border-radius: 10px;
@@ -225,6 +227,9 @@ main {
 
 p {
   margin: 0px;
+}
+a#pull{
+  display: none;
 }
 @media only screen and (max-device-width: 900px) {
   .root-container {
